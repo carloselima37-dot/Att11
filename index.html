@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Fornecedor</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8eef5; /* Fundo da página */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff; /* Fundo do formulário */
+            padding: 25px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            text-align: center;
+            color: #2a4d69; /* Cor do título */
+            margin-bottom: 20px;
+        }
+
+        form div {
+            margin-bottom: 12px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #2a4d69;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #a3b1c6;
+            border-radius: 5px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4f86c6;
+            box-shadow: 0 0 5px rgba(79, 134, 198, 0.5);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        button[type="button"] {
+            background-color: #4f86c6;
+        }
+
+        button[type="submit"] {
+            background-color: #2a4d69;
+        }
+
+        button[type="reset"] {
+            background-color: #d9534f;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h4>Cadastro de Fornecedor</h4>
+
+        <form method="POST" action="processa_fornecedor.php">
+
+            <div>
+                <label>CNPJ:</label>
+                <input type="text" name="cnpj" required>
+            </div>
+
+            <div>
+                <label>Nome:</label>
+                <input type="text" name="nome_fornecedor" required>
+            </div>
+
+            <div>
+                <label>Endereço:</label>
+                <input type="text" name="endereco" required>
+            </div>
+
+            <div>
+                <label>Telefone:</label>
+                <input type="text" name="telefone" required>
+            </div>
+
+            <div>
+                <label>E-mail:</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div>
+                <label>UF:</label>
+                <select name="uf" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                    <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                    <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                    <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                    <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                    <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                    <option>SP</option><option>SE</option><option>TO</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Região:</label>
+                <input type="text" name="regiao" required>
+            </div>
+
+            <div>
+                <label>Nome de contato:</label>
+                <input type="text" name="nome_contato" required>
+            </div>
+
+            <div class="buttons">
+                <button type="button">Pesquisar</button>
+                <button type="submit">Cadastrar</button>
+                <button type="reset">Limpar</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
